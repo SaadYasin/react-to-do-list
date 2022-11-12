@@ -11,10 +11,7 @@ const App = () => {
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-  // UseEffect hook
-  useEffect(() => {
-    filterList();
-  }, [todos, status]); 
+  useEffect(() =)
 
   // Functions
   const filterList = () => { 
@@ -36,19 +33,8 @@ const App = () => {
   return (
     <div className="flex flex-col items-center bg-sky-600 h-screen">
       <Header />
-      <Input
-        todos={todos}
-        setTodos={setTodos}
-        setInputText={setInputText}
-        inputText={inputText}
-        setStatus={setStatus}
-      />
-      
-      <TodoList
-        setTodos={setTodos}
-        todos={todos}
-        filteredTodos={filteredTodos}
-      />
+      <Input todos={todos} setTodos={setTodos} setInputText={setInputText} inputText={inputText} />
+      <TodoList setTodos={setTodos} todos={ todos } />
 
     </div>
   );

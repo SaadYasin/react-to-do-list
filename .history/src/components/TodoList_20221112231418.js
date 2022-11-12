@@ -9,7 +9,7 @@ const TodoList = ({ setTodos, todos, filteredTodos }) => {
   return (
     <div>
       <ul>
-        {filteredTodos.map((todo) => (
+        {odos.map((todo) => (
           <Todo
             setTodos={setTodos}
             todos={todos}

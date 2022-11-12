@@ -4,12 +4,12 @@ import React from 'react'
 import Todo from './Todo'
 
 // TodoList component
-const TodoList = ({ setTodos, todos, filteredTodos }) => {
+const TodoList = ({ setTodos, todos, filteredT }) => {
 
   return (
     <div>
       <ul>
-        {filteredTodos.map((todo) => (
+        {todos.map((todo) => (
           <Todo
             setTodos={setTodos}
             todos={todos}

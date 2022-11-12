@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Input from './components/Input';
 import TodoList from './components/TodoList';
@@ -11,24 +11,15 @@ const App = () => {
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-  // UseEffect hook
-  useEffect(() => {
-    filterList();
-  }, [todos, status]); 
-
   // Functions
   const filterList = () => { 
     switch (status) {
       case "completed":
-        setFilteredTodos(todos.filter(todos => todos.completed === true));
-        break;
-      
-      case "uncompleted":
-        setFilteredTodos(todos.filter(todos => todos.completed === false));
+        setFilteredTodos(todos.filter(todos => todos.completed ===))
+        
         break;
     
       default:
-        setFilteredTodos(todos);
         break;
     }
   }
@@ -36,19 +27,8 @@ const App = () => {
   return (
     <div className="flex flex-col items-center bg-sky-600 h-screen">
       <Header />
-      <Input
-        todos={todos}
-        setTodos={setTodos}
-        setInputText={setInputText}
-        inputText={inputText}
-        setStatus={setStatus}
-      />
-      
-      <TodoList
-        setTodos={setTodos}
-        todos={todos}
-        filteredTodos={filteredTodos}
-      />
+      <Input todos={todos} setTodos={setTodos} setInputText={setInputText} inputText={inputText} />
+      <TodoList setTodos={setTodos} todos={ todos } />
 
     </div>
   );

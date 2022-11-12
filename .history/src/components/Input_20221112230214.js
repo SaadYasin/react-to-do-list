@@ -25,7 +25,7 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
 
   const handleStatus = (e) => {
     setStatus(e.target.value);
-  }
+   }
 
   return (
     <div className="flex mb-4">

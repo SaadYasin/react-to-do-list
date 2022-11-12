@@ -47,7 +47,7 @@ const App = () => {
       <TodoList
         setTodos={setTodos}
         todos={todos}
-        filteredTodos={filteredTodos}
+        fi
       />
 
     </div>

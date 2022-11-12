@@ -4,7 +4,7 @@ import React from "react";
 import { BsFillPlusSquareFill } from "react-icons/bs";
 
 // Input component
-const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
+const Input = ({ setInputText, inputText, todos, setTodos }) => {
   const handleInput = (e) => {
     // e.preventDefault();
 
@@ -23,10 +23,7 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
     setInputText("");
   };
 
-  const handleStatus = (e) => {
-    setStatus(e.target.value);
-  }
-
+  const handleState = () => {
   return (
     <div className="flex mb-4">
       <form className="flex h-10 bg-sky-200 rounded-md "
@@ -48,7 +45,6 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
           name="todos"
           id="filter-todos"
           className="bg-transparent w-32 p-2"
-          onChange={handleStatus}
         >
           <option value="all">All</option>
           <option value="completed">Completed</option>

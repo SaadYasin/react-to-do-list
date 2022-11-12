@@ -1,0 +1,22 @@
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Input from './components/Input';
+import TodoList from './components/TodoList';
+import './App.css';
+
+const App = () => {
+  const [inputText, setInputText] = React.useState(null);
+  const [todos, setTodos] = React.useState([]);
+  const [status, setStatus] = useState("all")
+  
+  return (
+    <div className="flex flex-col items-center bg-sky-600 h-screen">
+      <Header />
+      <Input todos={todos} setTodos={setTodos} setInputText={setInputText} inputText={inputText} />
+      <TodoList setTodos={setTodos} todos={ todos } />
+
+    </div>
+  );
+}
+
+export default App;

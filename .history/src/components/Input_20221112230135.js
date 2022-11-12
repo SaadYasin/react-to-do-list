@@ -4,7 +4,7 @@ import React from "react";
 import { BsFillPlusSquareFill } from "react-icons/bs";
 
 // Input component
-const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
+const Input = ({ setInputText, inputText, todos, setTodos, setStau }) => {
   const handleInput = (e) => {
     // e.preventDefault();
 
@@ -24,8 +24,8 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
   };
 
   const handleStatus = (e) => {
-    setStatus(e.target.value);
-  }
+    setStatus
+   }
 
   return (
     <div className="flex mb-4">

@@ -45,10 +45,7 @@ const App = () => {
       />
       
       <TodoList
-        setTodos={setTodos}
-        todos={todos}
-        filteredTodos={filteredTodos}
-      />
+        setTodos={setTodos} todos={todos} />
 
     </div>
   );

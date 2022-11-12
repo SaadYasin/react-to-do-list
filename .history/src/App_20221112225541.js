@@ -11,7 +11,6 @@ const App = () => {
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-  // UseEffect hook
   useEffect(() => {
     filterList();
   }, [todos, status]); 
@@ -38,17 +37,8 @@ const App = () => {
       <Header />
       <Input
         todos={todos}
-        setTodos={setTodos}
-        setInputText={setInputText}
-        inputText={inputText}
-        setStatus={setStatus}
-      />
-      
-      <TodoList
-        setTodos={setTodos}
-        todos={todos}
-        filteredTodos={filteredTodos}
-      />
+        setTodos={setTodos} setInputText={setInputText} inputText={inputText} />
+      <TodoList setTodos={setTodos} todos={ todos } />
 
     </div>
   );

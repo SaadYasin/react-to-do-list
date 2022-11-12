@@ -11,7 +11,7 @@ const App = () => {
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-  // UseEffect hook
+  // UseEffect
   useEffect(() => {
     filterList();
   }, [todos, status]); 
@@ -44,11 +44,7 @@ const App = () => {
         setStatus={setStatus}
       />
       
-      <TodoList
-        setTodos={setTodos}
-        todos={todos}
-        filteredTodos={filteredTodos}
-      />
+      <TodoList setTodos={setTodos} todos={ todos } />
 
     </div>
   );
