@@ -9,9 +9,7 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
 
     setInputText(e.target.value);
 
-    if (inputText === "") {
-      alert("Please enter a value");
-    } 
+    if 
   };
 
   const handleSubmit = (e) => {
@@ -28,16 +26,14 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
   }
 
   return (
-    <div className="flex flex-col items-center mb-4">
-      <form
-        className="flex h-10 bg-sky-200 rounded-md mt-4"
-        onSubmit={handleSubmit}
-      >
+    <div className="flex mb-4">
+      <form className="flex h-10 bg-sky-200 rounded-md "
+        onSubmit={handleSubmit}>
         <input
           value={inputText}
           type="text"
-          placeholder="Add to the list . . ."
-          className="text-lg bg-transparent text-gray-800 px-4 w-72 md:w-80 outline-none"
+          placeholder="Enter task . . ."
+          className="text-lg bg-transparent text-gray-800 px-4 w-44 md:w-80 outline-none"
           onChange={handleInput}
           required
         />
@@ -46,16 +42,16 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
         </button>
       </form>
 
-      <div className="select ml-2 bg-sky-200 rounded-md mt-4">
+      <div className="select ml-2 bg-sky-200 rounded-md">
         <select
           name="todos"
           id="filter-todos"
-          className="bg-transparent w-44 p-2 "
+          className="bg-transparent w-32 p-2"
           onChange={handleStatus}
         >
-          <option value="all">Filter All</option>
-          <option value="completed">Filter Completed</option>
-          <option value="uncompleted">Filter UnCompleted</option>
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">UnCompleted</option>
         </select>
       </div>
     </div>

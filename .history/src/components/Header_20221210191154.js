@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const Header = () => {
   return (
     <div className='h-24 bg-sky-800/60 w-full'>

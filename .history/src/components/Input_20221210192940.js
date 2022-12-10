@@ -36,8 +36,8 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
         <input
           value={inputText}
           type="text"
-          placeholder="Add to the list . . ."
-          className="text-lg bg-transparent text-gray-800 px-4 w-72 md:w-80 outline-none"
+          placeholder="Enter task . . ."
+          className="text-lg bg-transparent text-gray-800 px-4 w-52 md:w-80 outline-none"
           onChange={handleInput}
           required
         />
@@ -47,15 +47,16 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
       </form>
 
       <div className="select ml-2 bg-sky-200 rounded-md mt-4">
+        <h4>Filter</h4>
         <select
           name="todos"
           id="filter-todos"
           className="bg-transparent w-44 p-2 "
           onChange={handleStatus}
         >
-          <option value="all">Filter All</option>
-          <option value="completed">Filter Completed</option>
-          <option value="uncompleted">Filter UnCompleted</option>
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">UnCompleted</option>
         </select>
       </div>
     </div>

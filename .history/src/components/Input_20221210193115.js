@@ -36,8 +36,8 @@ const Input = ({ setInputText, inputText, todos, setTodos, setStatus }) => {
         <input
           value={inputText}
           type="text"
-          placeholder="Add to the list . . ."
-          className="text-lg bg-transparent text-gray-800 px-4 w-72 md:w-80 outline-none"
+          placeholder="Enter task . . ."
+          className="text-lg bg-transparent text-gray-800 px-4 w-52 md:w-80 outline-none"
           onChange={handleInput}
           required
         />
