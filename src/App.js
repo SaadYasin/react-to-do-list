@@ -44,7 +44,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-sky-600 h-screen bg-[url('/public/img/bg-img05.jpg')]">
+    <div className="flex flex-col items-center bg-sky-600 min-h-screen bg-[url('/public/img/bg-img05.jpg')]">
       <Header />
       <Input
         todos={todos}
